@@ -1,0 +1,88 @@
+.chips-input {
+  width: 800px;
+  padding: 10px;
+  margin-bottom: 2em;
+  border-radius: 8px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  font-family: Verdana, Geneva, sans-serif;
+  color: #4e5e7d;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #eff3fa;
+}
+.chips-input .input {
+  min-width: 1em;
+  padding: 14px 0px;
+  border: none;
+  margin: 4px;
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  font: inherit;
+  color: #4e5e7d;
+  caret-color: #4e5e7d;
+  word-break: break-all;
+  background-color: transparent;
+}
+.chips-input .input:focus {
+  outline: none;
+}
+.chips-input .chip {
+  padding: 14px calc(20px + 0.8em + 16px) 14px 20px;
+  margin: 4px;
+  border-radius: 8px;
+  position: relative;
+  z-index: 10;
+  color: #184271;
+  background-color: #c9e4fc;
+}
+.chips-input .chip .text {
+  min-width: 1em;
+  display: inline-block;
+  word-break: break-all;
+}
+.chips-input .chip .text:focus {
+  outline: none;
+}
+.chips-input .chip .x {
+  width: 0.8em;
+  height: 0.8em;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background-image: url('x.png');
+  background-size: contain;
+}
+.chips-input .warning {
+  position: absolute;
+  left: 0;
+  bottom: -1.5em;
+  color: #de745b;
+  font-size: 0.6em;
+  font-weight: normal;
+}
+.chips-input .warning--visible {
+  display: block;
+}
+.chips-input .warning--hidden {
+  display: none;
+}
+.chips-input .placeholder {
+  padding: 14px 0px;
+  margin: 4px;
+  position: absolute;
+  z-index: 0;
+  color: #8b96aa;
+}
+.chips-input .placeholder--visible {
+  display: block;
+}
+.chips-input .placeholder--hidden {
+  display: none;
+}

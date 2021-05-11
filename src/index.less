@@ -1,0 +1,133 @@
+.chips-input
+{
+    @chipsinput-bg: #eff3fa;
+    @chip-bg: #c9e4fc;
+    @placeholder-color: #8b96aa;
+    @chipsinput-color: #4e5e7d;
+    @chip-color: #184271;
+    @chip-crosshair-bg: #5981a9;
+    @warning-color: #de745b;
+
+    width: 800px;
+    padding: 10px;
+    margin-bottom: 2em;
+    border-radius: 8px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+
+    font-family: Verdana, Geneva, sans-serif;
+    color: @chipsinput-color;
+    font-size: 24px;
+    font-weight: bold;
+
+    background-color: @chipsinput-bg;
+
+    .input
+    {
+        min-width: 1em;
+        padding: 14px 0px;
+        border: none;
+        margin: 4px;
+        
+        display: inline-block;
+        position: relative;
+        z-index: 10;
+
+        font: inherit;
+        color: @chipsinput-color;
+        caret-color: @chipsinput-color;
+        word-break: break-all;
+
+        background-color: transparent;
+
+        &:focus
+        {
+            outline: none;
+        }
+    }
+
+    .chip
+    {
+        padding: 14px calc(20px + 0.8em + 16px) 14px 20px;
+        margin: 4px;
+        border-radius: 8px;
+
+        position: relative;
+        z-index: 10;
+
+        color: @chip-color;
+
+        background-color: @chip-bg;
+
+        .text
+        {
+            min-width: 1em;
+            display: inline-block;
+            word-break: break-all;
+
+            &:focus
+            {
+                outline: none;
+            }
+        }
+
+        .x
+        {
+            width: 0.8em;
+            height: 0.8em;
+
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+
+            background-image: url('./x.png');
+            background-size: contain;
+        }
+    }
+
+    .warning
+    {
+        position: absolute;
+        left: 0;
+        bottom: -1.5em;
+
+        color: @warning-color;
+        font-size: 0.6em;
+        font-weight: normal;
+
+        &--visible
+        {
+            display: block;
+        }
+        &--hidden
+        {
+            display: none;
+        }
+    }
+
+    .placeholder
+    {
+        padding: 14px 0px;
+        margin: 4px;
+
+        position: absolute;
+        z-index: 0;
+
+        color: @placeholder-color;
+
+        &--visible
+        {
+            display: block;
+        }
+        &--hidden
+        {
+            display: none;
+        }
+    }
+}
